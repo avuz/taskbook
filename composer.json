@@ -1,0 +1,16 @@
+{
+  "name": "uzbek/simplemvc",
+  "description": "Simple MVC",
+  "keywords": ["mvc"],
+  "authors": [
+    {
+      "name": "Inoyatullokhon",
+      "email": "mronx@ya.ru"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "app/"
+    ]
+  }
+}
