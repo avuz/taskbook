@@ -7,6 +7,13 @@
  */
 
 return [
-    'name' => 'SimpleMVC',
-    'version' => '0.1.7',
+    'name' => 'TaskBook',
+    'version' => '1.0',
+    'pagination' => [
+        'limit' => 3,
+        'next' => '>',
+        'prev' => '<',
+        'first' => 'First',
+        'last' => 'Last'
+    ]
 ];

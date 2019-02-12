@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title><?php echo app()->name ?></title>
+    <meta name="author" content="Inoyatullokhon">
+    <meta name="generator" content="<?= app()->name ?>">
+    <title><?= app()->name ?></title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -18,7 +18,11 @@
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="#">Add task</a>
     </nav>
-    <a class="btn btn-outline-primary" href="/signin">Sign in</a>
+    <?php if(app()->isGuest): ?>
+        <a class="btn btn-outline-primary" href="/signin">Sign in</a>
+    <?php else: ?>
+        <a class="btn btn-outline-danger" href="/signout">Sign out</a>
+    <?php endif; ?>
 </div>
 
 <?php if ($title) { ?>
